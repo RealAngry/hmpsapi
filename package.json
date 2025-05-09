@@ -9,7 +9,7 @@
     "setup": "node seeder.js -i",
     "clear-data": "node seeder.js -d",
     "build-client": "cd .. && npm run build",
-    "production": "npm run postinstall && npm run build-client && cross-env NODE_ENV=production node server.js",
+    "production": "npm run build-client && cross-env NODE_ENV=production node server.js",
     "init-bot": "node scripts/initBotDirectories.js"
   },
   "dependencies": {
