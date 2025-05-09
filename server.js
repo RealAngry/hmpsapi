@@ -20,10 +20,10 @@ async function startServer() {
 
   // Enable CORS with specific configuration
   app.use(cors({
-    origin: true, // Allow any origin in development
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
-  }));
+  origin: '*', // Allow ALL origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 
   // Route files
   const auth = require('./routes/auth');
